@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions Page</title>
+
+    <script type="text/javascript">
+    //initialize the countdown starting with 10
+       var countDown = 10;
+       //show the initialization of 10 in the p tag countdownlabel
+       document.getElementById("countdownlabel").innerHTML = countDown;
+       //function called Blastoff will do the work when start button is clicked
+       function BlastOff ()
+        {
+            if(countDown != -1)
+            {
+                //each time the user hits the start button then the label shows the number
+                document.getElementById("countdownlabel").innerHTML = countDown;
+            }
+            else
+            {
+                //is countdown = 0 then unhide the blastoffLabel and show the user
+                const blasdtoffView = document.getElementById("blastoffLabel");
+                blastoffView.style.display = "block";
+            }
+            //used to decrement or decrease the value of countdown by one. notice the two dashes at the end
+            countDown--;
+        }      
+    </script>
+
+    <script type="text/javascript">
+        //code displayed below used to close the browser
+        function closeTheProgram()
+        {
+            this.close();
+        }
+    </script>
+
+<script type="text/javascript">
+    //code displayed below is used to display a message when opening the program
+    function MyLiveClassFunction()
+                {
+                    alert("Hello Viewers!");
+                }
+    
+                MyLiveClassFunction();
+    </script>
+    <!--code below displayes the design of the program labels, such as the color or font-->
+    <style type="text/css">
+        label{
+            color: forestgreen;
+            font-size: 12;
+            font-style: italic;
+            font-weight: bold;
+            font-family: Times New Roman;
+        }       
+
+        p{
+            color: royalblue
+        }
+
+    </style>
+</head>
+<body>
+    <!--This is the creator's name-->
+    <h1>My name is Bernard Clark</h1>
+    <!--insert your image below change the width and height properties-->
+<img width="300px" height="300px" src="Goku SSB Wallpapers - Wallpaper Cave
+https://www.bing.com/images/search?q=&view=detailv2&id=528E13FF27509A9298B9D12BCCC6AC19E2B44D17&ccid=sYHSyf1y&iss=fav&FORM=SVIM01&idpview=singleimage&mediaurl=https%253a%252f%252fwallpapercave.com%252fwp%252fwp3885806.png&expw=1024&exph=1024&thid=OIP.sYHSyf1y_S6LW2kujId8LgHaHa
+wallpapercave.com">
+<!--p tag used to store count down information to the user-->
+<p id="countdownlabel"></p>
+<!--p tag hidden and disclosed to user when the count =0-->
+<p id="blastoffLabel" hidden="hidden">BLAST OFF </p>
+<label>Welcome</label>
+<!--b is used as a short cut id to indicate blastoff button-->
+<button id="b"onclick="BlastOff ()">Start</button>
+<!--c id is a short cut to indicate to close or close button-->
+<button id="c"onclick="closeTheProgram()">End</button>
+
+</body>
+</html>
